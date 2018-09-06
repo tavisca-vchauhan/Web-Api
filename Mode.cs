@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shopping
+namespace ShoppingCart
 {
     interface Mode
     {
-        void ModeOfPurchase(string mode);
-       
+        void ModeOfPurchase(string mode);    
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{35910ED6-38D9-41AF-A3CE-50CAFB91B88B}</ProjectGuid>
+    <ProjectGuid>{EC64F8D1-F480-4E57-9252-D6BF2AF609A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Shopping</RootNamespace>
-    <AssemblyName>Shopping</AssemblyName>
+    <RootNamespace>ShoppingCart</RootNamespace>
+    <AssemblyName>ShoppingCart</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CartDetails.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Mode.cs" />
+    <Compile Include="MyCart.cs" />
+    <Compile Include="OnlinePayment.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

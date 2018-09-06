@@ -4,52 +4,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shopping
+namespace ShoppingCart
 {
-    class MyCart : CartDetails , Mode
+    public class MyCart
     {
-        void PlaceOrder()
+        List<ItemDetails> itemList = new List<ItemDetails>();
+        public void AddItemToCart(ItemDetails item)
         {
-
-        }
-        void ContinueShopping()
-        {
-
-        }
-
-        public void AddItemToCart()
-        {
-            throw new NotImplementedException();
+            itemList.Add(item);
         }
 
         public void ClearCart()
         {
-            throw new NotImplementedException();
+            itemList.Clear();
+            Console.Write("Cart is Clear");
         }
 
-        public void RemoveItemFromCart()
+        public void RemoveItemFromCart(ItemDetails item)
         {
-            throw new NotImplementedException();
+            itemList.Remove(item);
         }
 
         public void TotalItemPrice()
         {
-            throw new NotImplementedException();
+            float Amount = 0;
+            for(int i=0;i<itemList.Count;i++)
+            {
+                Amount += itemList[i].ItemPrice;
+            }
+            Console.WriteLine(Amount);
         }
 
-        public void TotalItemQuantity()
+        public int TotalItemQuantity()
         {
-            throw new NotImplementedException();
+            int Quantity = 0;
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                Quantity += itemList[i].ItemQuantity;
+            }
+            Console.WriteLine(Quantity);
+            return Quantity;
         }
 
-        void CartDetails.MyCart()
+        public void CartDetail()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("-----------------------------------------------------------------------------");
+            for (int i=0;i<itemList.Count;i++)
+            {
+                Console.WriteLine("ID : "+itemList[0].ItemID);
+                Console.WriteLine("Name : "+itemList[0].ItemName);
+                Console.WriteLine("Price : "+itemList[0].ItemPrice);
+                Console.WriteLine("Quantity : "+itemList[0].ItemQuantity);
+                Console.WriteLine("-----------------------------------------------------------------------------");
+            }
         }
 
-        public void ModeOfPurchase(string mode)
-        {
-            throw new NotImplementedException();
-        }
+       
+
     }
 }
